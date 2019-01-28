@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	 <package name="default" namespace="/student" extends="struts-default">
+      
+      <action name="StudentRegister" class="com.action.StudentAction" method="StudentRegister" >
+            <result  name="success">/student/register_success.jsp</result>
+            <result name="error">/student/register.jsp</result>             
+            <result name="input">/student/register.jsp</result>          
+      </action>
+      
+      <action name="studentLogin" class="com.action.StudentAction" method="studentLogin">           
+            <result name="input">/student/login.jsp</result>
+            <result name="failure">/student/login.jsp</result>
+            <result type= "redirectAction" name="success">
+              <param name="actionName">stdentLoginLeave</param>
+                <param name="namespace">/leave/student</param>
+            </result>            
+      </action>    
+           
+     
+    </package>
+    
+   
+
+</struts>    

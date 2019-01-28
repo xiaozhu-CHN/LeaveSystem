@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-6-29 17:30:31 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="mydate_163012222_47" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.shiti.DbLeave" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="db_leave">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="student" optimistic-lock="true" type="int" unique="false">
+            <column name="student" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="timeStarr" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="timeStarr" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="timeEnd" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="timeEnd" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="timeChange" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="timeChange"/>
+        </property>
+        <property generated="never" lazy="false" name="reason" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="reason" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="fdyState" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="fdy_state"/>
+        </property>
+        <property generated="never" lazy="false" name="xyldState" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="xyld_state"/>
+        </property>
+        <property generated="never" lazy="false" name="xgcState" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="xgc_state"/>
+        </property>
+        <property generated="never" lazy="false" name="xjState" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="xj_state"/>
+        </property>
+        <property generated="never" lazy="false" name="remarks" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="remarks"/>
+        </property>
+    </class>
+</hibernate-mapping>

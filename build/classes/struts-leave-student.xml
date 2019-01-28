@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+	<struts>
+
+	 <package name="leave" namespace="/leave/student" extends="struts-default">
+      
+      <action name="stdentLoginLeave" class="com.leave.action.StudentLeaveAction" method="stdentLoginLeave" >
+            <result name="success" >/leave/student/index.jsp</result>            
+            <result name="failure" >/leave/student/login_failure.jsp</result>          
+      </action>
+      
+      <action name="limitleave" class="com.leave.action.StudentLeaveAction" method="limitleave" >
+            <result name="success" >/leave/student/index.jsp</result>            
+            <result name="failure" >/leave/student/index.jsp</result>          
+      </action>
+      
+      <action name="applyLeave" class="com.leave.action.StudentLeaveAction" method="applyLeave" >
+            <result name="success">/leave/student/apply_success.jsp</result>            
+            <result name="failure">/leave/student/apply.jsp</result>          
+      </action>
+      
+      <action name="shenqing" class="com.leave.action.StudentLeaveAction" method="shenqing" >
+            <result name="success">/leave/student/apply.jsp</result>
+      </action>      
+            
+       <action name="audited" class="com.leave.action.StudentLeaveAction" method="audited" >
+            <result name="success">/leave/student/index.jsp</result>
+      </action>
+      
+      <action name="failure" class="com.leave.action.StudentLeaveAction" method="failure" >
+            <result name="success">/leave/student/index.jsp</result>
+      </action>  
+      
+      <action name="Auditsuccess" class="com.leave.action.StudentLeaveAction" method="Auditsuccess" >
+            <result name="success">/leave/student/index.jsp</result>
+      </action>
+      
+      <action name="Tobesoldoff" class="com.leave.action.StudentLeaveAction" method="Tobesoldoff" >
+            <result name="success">/leave/student/index.jsp</result>
+      </action>
+      
+       <action name="Alreadysoldoff" class="com.leave.action.StudentLeaveAction" method="Alreadysoldoff" >
+            <result name="success">/leave/student/index.jsp</result>
+      </action>
+      
+      <action name="Leavemodify" class="com.leave.action.StudentLeaveAction" method="Leavemodify" >
+            <result name="success">/leave/student/apply_modify.jsp</result>            
+            <result name="failure">/leave/student/index.jsp</result>          
+      </action>
+      
+      <action name="Amendafake" class="com.leave.action.StudentLeaveAction" method="Amendafake" >
+            <result name="success">/leave/student/apply_success.jsp</result>            
+            <result name="failure">/leave/student/apply_modify.jsp</result>          
+      </action>
+      
+      <action name="StudentExit" class="com.leave.action.StudentLeaveAction" method="StudentExit" >
+            <result name="success">/index.jsp</result>            
+            <result name="failure">/leave/student/index.jsp</result>          
+      </action>
+      
+      <action name="executeDownLoad" class="com.leave.action.DownLoadAction" method="executeDownLoad" >
+            <result name="success" type="stream"></result>                     
+      </action>
+      
+      <action name="studentdelete" class="com.leave.action.StudentLeaveAction" method="studentdelete" >
+            <result name="success">/leave/student/studentdelete.jsp</result>            
+            <result name="failure">/leave/student/studentdelete.jsp</result>          
+      </action>
+     </package>
+
+	</struts> 

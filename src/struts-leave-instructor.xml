@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+	
+<struts>
+
+	 <package name="instructor" namespace="/leave/teacher/instructor" extends="struts-default">
+      
+      <action name="fdyteacherLoginLeave" class="com.leave.action.FdyTeacherLeaveAction" method="fdyteacherLoginLeave" >
+            <result name="success">/leave/teacher/instructor/index.jsp</result>
+            <result name="failure">/leave/teacher/instructor/index.jsp</result>             
+            <result name="input">/leave/teacher/instructor/login_failure.jsp</result>          
+      </action>   
+      
+      <action name="limitleave" class="com.leave.action.FdyTeacherLeaveAction" method="limitleave" >
+            <result name="success">/leave/teacher/instructor/index.jsp</result>            
+            <result name="input">/leave/teacher/instructor/index.jsp</result>          
+      </action>  
+     
+	  <action name="examine" class="com.leave.action.FdyTeacherLeaveAction" method="examine" >
+	        <result name="success" type="chain">ToBeAudited</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>  
+	  
+	  <action name="ToBeAudited" class="com.leave.action.FdyTeacherLeaveAction" method="ToBeAudited" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action> 
+	  
+	  <action name="ToBeASoldOff" class="com.leave.action.FdyTeacherLeaveAction" method="ToBeASoldOff" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action> 
+	  
+	  <action name="Adopt" class="com.leave.action.FdyTeacherLeaveAction" method="Adopt" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="NoAdopt" class="com.leave.action.FdyTeacherLeaveAction" method="NoAdopt" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="AlreadySoldOff" class="com.leave.action.FdyTeacherLeaveAction" method="AlreadySoldOff" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="LeaveStudent" class="com.leave.action.FdyTeacherLeaveAction" method="LeaveStudent" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="LeaveId" class="com.leave.action.FdyTeacherLeaveAction" method="LeaveId" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="LeaveName" class="com.leave.action.FdyTeacherLeaveAction" method="LeaveName" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="EclassId" class="com.leave.action.FdyTeacherLeaveAction" method="EclassId" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="executeDownLoad" class="com.leave.action.DownloadTeacherAction" method="executeDownLoad" >
+            <result name="success" type="stream"></result>                     
+      </action>
+      
+      <action name="SellOff" class="com.leave.action.FdyTeacherLeaveAction" method="SellOff" >
+	        <result name="success">/leave/teacher/instructor/index.jsp</result>            
+	        <result name="input">/leave/teacher/instructor/index.jsp</result>          
+	  </action>
+	  
+	  <action name="InstructorExit" class="com.leave.action.FdyTeacherLeaveAction" method="InstructorExit" >
+            <result name="success">/index.jsp</result>            
+            <result name="input">/leave/teacher/instructor/index.jsp</result>          
+      </action>
+    </package>
+
+</struts>  

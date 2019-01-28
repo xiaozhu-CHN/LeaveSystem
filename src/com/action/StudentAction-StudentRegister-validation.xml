@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator 1.0.2//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="dbstudent.student">
+		<field-validator type="int">
+			<param name="min">99999999</param>
+			<param name="max">999999999</param>
+			<message>学号不正确！</message>
+		</field-validator>
+	</field>
+	
+	<field name="dbstudent.password">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>密码不能为空！</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<message>密码长度不能小于6位！</message>
+		</field-validator>
+	</field>
+	
+	<field name="re_password">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message>确认密码不能为空！</message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[re_password==dbstudent.password]]></param>
+			<message>密码不一致！</message>
+		</field-validator>
+	</field>
+	
+	<field name="dbstudent.name">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message>真实姓名不能为空！</message>
+		</field-validator>
+	</field>
+	
+	<field name="dbstudent.sex">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message>请选择性别！</message>
+		</field-validator>
+	</field>
+	
+</validators>	
+	

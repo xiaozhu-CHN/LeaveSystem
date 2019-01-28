@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
+	 <package name="college" namespace="/leave/teacher/college" extends="struts-default,json-default">
+	 
+	 <action name="CollegeLoginLeave" class="com.leave.action.CollegeLeaveAction" method="CollegeLoginLeave" >
+            <result name="success">/leave/teacher/college/index.jsp</result>
+            <result name="failure">/leave/teacher/college/index.jsp</result>             
+            <result name="input">/leave/teacher/college/login_failure.jsp</result>          
+      </action>  
+	 
+	 <action name="limitleave" class="com.leave.action.CollegeLeaveAction" method="limitleave" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="LeaveStudent" class="com.leave.action.CollegeLeaveAction" method="LeaveStudent" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="LeaveId" class="com.leave.action.CollegeLeaveAction" method="LeaveId" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="LeaveName" class="com.leave.action.CollegeLeaveAction" method="LeaveName" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="ToBeAudited" class="com.leave.action.CollegeLeaveAction" method="ToBeAudited" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="ToBeASoldOff" class="com.leave.action.CollegeLeaveAction" method="ToBeASoldOff" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="Adopt" class="com.leave.action.CollegeLeaveAction" method="Adopt" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="NoAdopt" class="com.leave.action.CollegeLeaveAction" method="NoAdopt" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="AlreadySoldOff" class="com.leave.action.CollegeLeaveAction" method="AlreadySoldOff" >
+            <result name="success">/leave/teacher/college/index.jsp</result>            
+            <result name="input">/leave/teacher/college/index.jsp</result>          
+      </action>
+      
+      <action name="examine" class="com.leave.action.CollegeLeaveAction" method="examine" >
+	        <result name="success" type="chain">ToBeAudited</result>            
+	        <result name="input">/leave/teacher/college/index.jsp</result>          
+	  </action>
+	  
+	  <action name="CollegeExit" class="com.leave.action.CollegeLeaveAction" method="CollegeExit" >
+	        <result name="success">/index.jsp</result>            
+	        <result name="input">/leave/teacher/college/index.jsp</result>          
+	  </action>
+	  
+	  <action name="executeDownLoad" class="com.leave.action.DownloadTeacherAction" method="executeDownLoad" >
+            <result name="success" type="stream"></result>                     
+      </action>
+      
+      <action name="TeacherEclass" class="com.leave.action.CollegeLeaveAction" method="TeacherEclass" >
+	        <result name="success">/leave/teacher/college/eclass.jsp</result>            
+	        <result name="input">/leave/teacher/college/index.jsp</result>          
+	  </action>
+	  
+	  <action name="CollegeTeacher" class="com.leave.action.CollegeLeaveAction" method="CollegeTeacher" >
+	        <result name="success" type="json">
+	        <param name="root">result</param>
+	        </result>            
+	        <result name="error"></result>          
+	  </action>
+	  
+	  <action name="TeacherEclassAppointment" class="com.leave.action.CollegeLeaveAction" method="TeacherEclassAppointment" >
+	        <result name="success" type="chain">TeacherEclass</result>            
+	        <result name="input" type="chain">TeacherEclass</result>          
+	  </action>
+	  
+	  <action name="AddEclass" class="com.leave.action.CollegeLeaveAction" method="AddEclass" >
+	        <result name="success" type="chain">TeacherEclass</result>            
+	        <result name="input" type="chain">TeacherEclass</result>          
+	  </action>
+	  
+	  <action name="DeleteEclass" class="com.leave.action.CollegeLeaveAction" method="DeleteEclass" >
+	        <result name="success" type="chain">TeacherEclass</result>            
+	        <result name="input" type="chain">TeacherEclass</result>          
+	  </action>
+	</package>
+</struts>

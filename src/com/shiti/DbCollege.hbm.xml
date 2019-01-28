@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-6-29 17:30:31 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="mydate_163012222_47" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.shiti.DbCollege" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="db_college">
+        <id name="college" type="int">
+            <column name="college"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="name"/>
+        </property>
+    </class>
+</hibernate-mapping>
